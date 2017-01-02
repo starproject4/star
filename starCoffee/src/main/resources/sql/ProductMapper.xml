@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.hb.star.model.ProductDao">
+  	<select id="selectAll" resultType="com.hb.star.model.ProductVo">
+  		SELECT * FROM PRODUCT
+  	</select>
+  	<insert id="insertOne" parameterType="com.hb.star.model.ProductVo">
+  		INSERT INTO PRODUCT VALUES(PRODUCT_SEQ.NEXTVAL,#{title},#{content},SYSDATE,#{originalfilename},#{newfilename},#{category})
+  	</insert>
+  	<select id="selectList" parameterType="String" resultType="com.hb.star.model.ProductVo">
+  		SELECT * FROM PRODUCT WHERE CATEGORY=#{product}
+  	</select>
+  	<select id="selectOne" parameterType="int" resultType="com.hb.star.model.ProductVo">
+  		SELECT * FROM PRODUCT WHERE NO=#{no}
+  	</select>
+  	<update id="updateOne" parameterType="com.hb.star.model.ProductVo">
+  		UPDATE PRODUCT SET TITLE=#{title},CONTENT=#{content},NALJA=SYSDATE,ORIGINALFILENAME=#{originalfilename},NEWFILENAME=#{newfilename},CATEGORY=#{category} WHERE NO=#{no}
+  	</update>
+  	<delete id="deleteOne" parameterType="int">
+  		DELETE FROM PRODUCT WHERE NO=#{no}
+  	</delete>
+  </mapper>

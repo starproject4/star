@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>GETTING STARTED WITH BRACKETS</title>
+      <!-- 부트스트랩 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/star.css" rel="stylesheet">
+	<style type="text/css">
+        html, body{
+            height: 100%;
+        }
+        #header{
+            width:100%;
+            height: 100px;
+            background-color: antiquewhite;
+            position: fixed;
+            left:0;
+            top:0;
+        }
+        .content{
+            
+            height: auto;
+        }
+        #footer{
+            width: 100%;
+            background-color: beige;
+        }
+         @media (min-width: 500px) {      
+             #header{
+                 height: 50px;
+             }#footer{
+                 20px;
+             }
+        }
+	</style>
+</head>
+<body>
+<!-- header link -->
+   <div id="header">
+       header
+       
+   </div>
+   <!-- 여기부터 본문 -->
+    <div class="container content">
+
+		<div class="row">
+		<!-- 여기부터 입력합니다 -->
+			<h1>메뉴 등록</h1>
+			<div>
+			    <span>화면높이</span>
+			   <p id="winh"></p>
+			   <span>현재</span>
+			    <p id="dvch">ddssgd</p>
+			    <p>ddssgd</p>
+			     <!--<p>ddssgd</p>
+			    <p>ddssgd</p>
+			    <p>ddssgd</p>
+			    <p>ddssgd</p>
+			    <p>ddssgd</p>
+			    <p>ddssgd</p>
+			    <p>ddssgd</p>
+			    <p>ddssgd</p>
+			    <p>ddssgd</p>
+			    <p>ddssgd</p>
+			    <p>ddssgd</p>
+			    <p>ddssgd</p>-->
+			</div>
+		<!-- 여기까지 입력합니다. -->
+		</div><!-- /.row -->      
+    </div><!-- /.container -->
+    <!-- 여기까지 본문 -->
+     <DIV id="footer">
+         footer
+     </DIV>
+
+     <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+    <script src="/star/resources/js/bootstrap.min.js"></script>
+    <script src="/star/resources/js/star.js"></script>
+    <script>
+    	$(function(){
+    		//margin-top:-1.9em;height:1.9em
+             function funLoad(){
+                var Cheight = $(window).height();
+                //$('#footer').css({'height':Cheight+'px'});
+                 $('#footer').css({'margin-top':'-300px','height':'300px'});
+            }
+            window.onload = funLoad;
+            window.onresize = funLoad;
+           });
+            
+            
+    	});
+    </script>
+        
+    </body>
+</html>
