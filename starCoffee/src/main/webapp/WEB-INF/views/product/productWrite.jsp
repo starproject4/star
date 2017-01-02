@@ -43,7 +43,7 @@
 
 		<div class="row">
 		<!-- 여기부터 입력합니다 -->
-			<h1>메뉴 등록</h1>
+			<h1>상품 등록</h1>
 			<form action="/star/product/insert" method="post" enctype="multipart/form-data" >
 				<table class="col-sm-12">
 					<tr>
@@ -116,7 +116,8 @@
 		function sbmbtn(){
 			var title = document.getElementById("title").value;
 			var content = document.getElementById("content").value;
-			if(title == '' || content == ''){
+			var radio = document.getElementsByTags("radio").checked;
+			if(title == '' || content == '' ){
 				alert("내용을 입력하세요");				
 				return false;
 			}else{

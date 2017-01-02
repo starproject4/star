@@ -16,7 +16,7 @@
 <body>
 	<h4 class="s_title">${title }</h4>	
 	<c:forEach items="${alist}" var="bean">
-	<div class="col-sm-4 s_product con">				
+	<div class="col-sm-4 s_menu con">				
 		<input type="checkbox" name="delchk" value="${bean.no }"/>			
 		<a href="/star/product/detail?no=${bean.no }">
 			<img src="/star/resources/imgs/upload/${bean.newfilename }">

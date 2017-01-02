@@ -79,7 +79,7 @@
                     <input type="hidden" name="newfilename" id="file" value="${bean.newfilename }" />
                 </div>
 				<div class="star-btn button col-sm-12">
-                    <input class="btn btn-success" type="submit" id="insert" value="등록"/>
+                    <input class="btn btn-success" onclick="return sbmbtn();" type="submit" id="insert" value="등록"/>
                     <input class="btn btn-default" type="button" id="back" value="취소"/>
 				</div>
 			</form>
@@ -117,7 +117,23 @@
     			location.href = "/star/menu";
     		});
     		
-    	});	    
+    	});	
+    	function sbmbtn(){
+			var title = document.getElementById("title").value;
+			var kcal = document.getElementById("kcal").value;
+			var sodium = document.getElementById("sodium").value;
+			var fat = document.getElementById("fat").value;
+			var sacchride = document.getElementById("saccharide").value;
+			var protein = document.getElementById("protein").value;
+			var caffeine = document.getElementById("caffeine").value;
+			var content = document.getElementById("content").value;
+			if(title == '' || content == '' || kcal == '' || sodium == '' || fat == '' || saccharide == '' || protein == ''|| caffeine == ''){
+				alert("내용을 입력하세요");				
+				return false;
+			}else{
+				return true;
+			}
+		}
     </script>
 </body>
 </html>

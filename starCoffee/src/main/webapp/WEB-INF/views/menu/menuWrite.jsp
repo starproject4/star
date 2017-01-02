@@ -119,7 +119,7 @@
 			var protein = document.getElementById("protein").value;
 			var caffeine = document.getElementById("caffeine").value;
 			var content = document.getElementById("content").value;
-			if(title == '' || content == ''){
+			if(title == '' || content == '' || kcal == '' || sodium == '' || fat == '' || saccharide == '' || protein == ''|| caffeine == ''){
 				alert("내용을 입력하세요");				
 				return false;
 			}else{
